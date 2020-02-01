@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 6823781243364298895}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.09, y: 0.08, z: 0}
-  m_LocalScale: {x: 0.07, y: 0.07, z: 0.07}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6823781243948147221}
   m_Father: {fileID: 0}
@@ -73,7 +73,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -10
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: -597065138220609193, guid: bdf7ad0d75a747346a313576ab423540,
+    type: 3}
   m_Color: {r: 0.023139918, g: 0.06441783, b: 0.3773585, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -112,11 +113,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392a8c6f2c97b084fa378cb7fe61fa34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stickySprite: {fileID: 5371236172526771201, guid: 9be471857e84e98429318c3b4c0cd914,
+  stickySprite: {fileID: -597065138220609193, guid: bdf7ad0d75a747346a313576ab423540,
     type: 3}
-  normalSprite: {fileID: 8647063649771725814, guid: 9be471857e84e98429318c3b4c0cd914,
+  normalSprite: {fileID: -8070577524028168948, guid: bdf7ad0d75a747346a313576ab423540,
     type: 3}
-  respawnTimer: 5
+  respawnTimer: 20
 --- !u!1 &6823781243948147220
 GameObject:
   m_ObjectHideFlags: 0

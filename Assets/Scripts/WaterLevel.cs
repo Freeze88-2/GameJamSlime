@@ -18,7 +18,7 @@ public class WaterLevel : MonoBehaviour
     {
         if (rb.gravityScale > 0)
         {
-            waterlevel.y = (holeLogic.HoleCount * 20);
+            waterlevel.y = (holeLogic.HoleCount * 10);
             rb.velocity = waterlevel * Time.deltaTime;
         }
         else
