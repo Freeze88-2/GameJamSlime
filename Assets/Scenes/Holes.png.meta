@@ -1,31 +1,7 @@
 fileFormatVersion: 2
-guid: ad02e1f9ba66a2745b0be97a67d8e3e2
+guid: bdf7ad0d75a747346a313576ab423540
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -597065138220609193
-    second: Holes_0
-  - first:
-      213: 8952800856369225737
-    second: Holes_1
-  - first:
-      213: 5449675206751148173
-    second: Holes_2
-  - first:
-      213: -6597854605687844029
-    second: Holes_3
-  - first:
-      213: -8070577524028168948
-    second: Holes_4
-  - first:
-      213: -5274691425799770326
-    second: Holes_5
-  - first:
-      213: -6487682804634884975
-    second: Holes_6
-  - first:
-      213: -5924802017407687567
-    second: Holes_7
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -55,7 +31,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -64,12 +40,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -94,189 +70,9 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Holes_0
-      rect:
-        serializedVersion: 2
-        x: 3
-        y: 21
-        width: 9
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1360af58a3d922843ba0c64534261d06
-      internalID: -597065138220609193
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Holes_1
-      rect:
-        serializedVersion: 2
-        x: 21
-        y: 18
-        width: 6
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e18cb77fab335e1438aab085076f3c7c
-      internalID: 8952800856369225737
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Holes_2
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 20
-        width: 7
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d27cf6fe203293847bc1f6880bfde945
-      internalID: 5449675206751148173
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Holes_3
-      rect:
-        serializedVersion: 2
-        x: 53
-        y: 21
-        width: 6
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c6436c04d23fc0a4da8ae2be60a62857
-      internalID: -6597854605687844029
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Holes_4
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 3
-        width: 11
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d457101274e0d84428cc8966ea2e7450
-      internalID: -8070577524028168948
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Holes_5
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 2
-        width: 9
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c8c6adf59f53d3478908d8319e1a29e
-      internalID: -5274691425799770326
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Holes_6
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 3
-        width: 8
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2586e90116972384ca981ecf0c02aad1
-      internalID: -6487682804634884975
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Holes_7
-      rect:
-        serializedVersion: 2
-        x: 52
-        y: 3
-        width: 8
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d912697f9080654487e313cccc833d7
-      internalID: -5924802017407687567
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
