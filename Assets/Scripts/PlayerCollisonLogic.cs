@@ -12,12 +12,14 @@ public class PlayerCollisonLogic : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag == "Water")
+        if (collision.CompareTag("Water"))
             Debug.Log("dieded");
-        if (collision.tag == "Hole")
+        if (collision.CompareTag("Hole"))
         {
-            if (Input.GetKey(KeyCode.E))
+            Debug.Log("here");
+            if (interact)
             {
+                Debug.Log("jomn");
                 collision.gameObject.GetComponent<Holes>().DeactivateHole();
             }
         }

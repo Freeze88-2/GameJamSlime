@@ -6,13 +6,24 @@ public class WaterLevel : MonoBehaviour
 {
     [SerializeField] private GameObject waterContainer;
     private HoleLogic holeLogic;
+    private Vector3 waterlevel;
+    private Rigidbody2D rb;
 
     private void Start()
     {
         holeLogic = waterContainer.GetComponent<HoleLogic>();
+        rb = GetComponent<Rigidbody2D>();
     }
     private void Update()
     {
-        transform.position = new Vector3(transform.position.x, transform.position.y + 0.001f * holeLogic.holeCount, transform.position.z);
+        if (rb.gravityScale > 0)
+        {
+            waterlevel.y = (holeLogic.HoleCount * 10);
+            rb.velocity = waterlevel * Time.deltaTime;
+        }
+        else
+        {
+            rb.gravityScale = 8;
+        }
     }
 }
