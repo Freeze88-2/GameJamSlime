@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector3 movement;
     private TrailRenderer trail;
+    private Animator anim;
+    private SpriteRenderer sprite;
 
     [Header("Variables")]
     [Tooltip("Maximum air time")]
@@ -19,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpForce = 10f;
 
     private float inputH;
-    private float maxGravity = 8;
+    private readonly float maxGravity = 8;
     private float timer = 0;
     private bool jump;
     private bool grabWall;
@@ -27,7 +29,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        sprite = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         trail = transform.GetChild(0).gameObject.GetComponent<TrailRenderer>();
         trail.emitting = false;
     }
@@ -38,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
         jump = Input.GetKey(KeyCode.Space);
         grabWall = Input.GetKey(KeyCode.W);
         isGrounded = Physics2D.Raycast(transform.position, -transform.up, 0.8f,
-                     LayerMask.GetMask("Ground"));
+                     LayerMask.GetMask("Ground", "FloatingObject"));
     }
     private void FixedUpdate()
     {
@@ -75,5 +79,16 @@ public class PlayerMovement : MonoBehaviour
         movement = new Vector3(inputH * speed, movement.y);
 
         rb.velocity = movement;
+        if (inputH > 0)
+        {
+            sprite.flipX = true;
+        }
+        if (inputH < 0)
+        {
+            sprite.flipX = false;
+        }
+        anim.SetFloat("Jump", rb.velocity.y);
+        anim.SetFloat("Walking", Mathf.Abs(inputH));
+        anim.SetBool("IsGrounded", isGrounded);
     }
 }

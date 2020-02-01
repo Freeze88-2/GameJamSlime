@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class HoleLogic : MonoBehaviour
 {
-    public int holeCount { get; set; }
+    public int HoleCount { get; set; }
 }

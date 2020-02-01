@@ -1,21 +1,27 @@
 fileFormatVersion: 2
-guid: 26b494acceff2b74e860d1a9cb2a2989
+guid: 9be471857e84e98429318c3b4c0cd914
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2749946869716656923
-    second: iddle0_0
+      213: 8647063649771725814
+    second: SaltoVertical_0
   - first:
-      213: 6680990941091052886
-    second: iddle0_1
+      213: 6222016969864210661
+    second: SaltoVertical_1
   - first:
-      213: 8883987218524153455
-    second: iddle0_2
+      213: 3493135163197605029
+    second: SaltoVertical_2
+  - first:
+      213: 5371236172526771201
+    second: SaltoVertical_3
+  - first:
+      213: 8120336492835386908
+    second: SaltoVertical_4
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -29,7 +35,7 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
@@ -95,13 +101,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: iddle0_0
+      name: SaltoVertical_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 13
-        width: 14
-        height: 11
+        x: 10
+        y: 18
+        width: 16
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -109,18 +115,81 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5409793023da8e46b50b89cf909f4f0
-      internalID: 2749946869716656923
+      spriteID: c5a9a946444fce541ad126208581b6c4
+      internalID: 8647063649771725814
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: iddle0_1
+      name: SaltoVertical_1
       rect:
         serializedVersion: 2
-        x: 47
-        y: 13
+        x: 48
+        y: 18
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04c33e611d5d48342895192add4b40cb
+      internalID: 6222016969864210661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SaltoVertical_2
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 18
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cdb364a6b07c7f489654ece41dd6165
+      internalID: 3493135163197605029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SaltoVertical_3
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 18
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c79d14988953f394790fa7385586ac60
+      internalID: 5371236172526771201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SaltoVertical_4
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 18
         width: 14
         height: 10
       alignment: 0
@@ -130,29 +199,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e8d798fc380fd344971cddb63329f9a
-      internalID: 6680990941091052886
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: iddle0_2
-      rect:
-        serializedVersion: 2
-        x: 82
-        y: 13
-        width: 16
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c2ffa4f5813d3b14fb058d567dea0d43
-      internalID: 8883987218524153455
+      spriteID: b22fa567426157e4e90430122b087ebf
+      internalID: 8120336492835386908
       vertices: []
       indices: 
       edges: []
