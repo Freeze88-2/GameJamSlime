@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -12,13 +10,13 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Variables")]
     [Tooltip("Maximum air time")]
-    [SerializeField] private float maxJumpTime = 5;
+    [SerializeField] private readonly float maxJumpTime = 5;
     [Tooltip("Maximum movement speed")]
-    [SerializeField] private float speed = 10f;
+    [SerializeField] private readonly float speed = 10f;
     [Tooltip("Input multiplier while grabbing wall")]
-    [SerializeField] private float inputScaler = 0.5f;
+    [SerializeField] private readonly float inputScaler = 0.5f;
     [Tooltip("The speed gained when jump is pressed")]
-    [SerializeField] private float jumpForce = 10f;
+    [SerializeField] private readonly float jumpForce = 10f;
 
     private float inputH;
     private readonly float maxGravity = 8;
@@ -46,8 +44,14 @@ public class PlayerMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (isGrounded) timer = 0;
-        else if (!jump) timer = maxJumpTime;
+        if (isGrounded)
+        {
+            timer = 0;
+        }
+        else if (!jump)
+        {
+            timer = maxJumpTime;
+        }
 
         if (!grabWall)
         {
@@ -73,12 +77,17 @@ public class PlayerMovement : MonoBehaviour
             }
 
             rb.gravityScale = Mathf.Min(rb.gravityScale + 0.01f, maxGravity - 0.1f);
-            
+
             inputH *= inputScaler;
         }
         movement = new Vector3(inputH * speed, movement.y);
 
         rb.velocity = movement;
+
+        SetAnimator();
+    }
+    private void SetAnimator()
+    {
         if (inputH > 0)
         {
             sprite.flipX = true;
@@ -90,5 +99,6 @@ public class PlayerMovement : MonoBehaviour
         anim.SetFloat("Jump", rb.velocity.y);
         anim.SetFloat("Walking", Mathf.Abs(inputH));
         anim.SetBool("IsGrounded", isGrounded);
+        anim.SetBool("IsSticking", grabWall);
     }
 }

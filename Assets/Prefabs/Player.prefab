@@ -156,10 +156,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f14a8707feacd44d86530811c722a52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxJumpTime: 10
-  speed: 10
-  inputScaler: 0.5
-  jumpForce: 10
 --- !u!114 &3378080740903113473
 MonoBehaviour:
   m_ObjectHideFlags: 0

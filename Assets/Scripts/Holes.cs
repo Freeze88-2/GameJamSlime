@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Holes : MonoBehaviour
@@ -8,18 +7,20 @@ public class Holes : MonoBehaviour
     private ParticleSystem particles;
     private CircleCollider2D circleCollider;
     private WaitForSecondsRealtime waitTimer = null;
-    private SpriteRenderer render; 
+    private SpriteRenderer render;
 
     [SerializeField] private Sprite stickySprite = null;
     [SerializeField] private Sprite normalSprite = null;
     [SerializeField] private float respawnTimer = 5;
-    void Start()
+
+    private void Start()
     {
         render = GetComponent<SpriteRenderer>();
         waitTimer = new WaitForSecondsRealtime(respawnTimer);
         particles = GetComponentInChildren<ParticleSystem>();
         hole = gameObject.GetComponentInParent<HoleLogic>();
         circleCollider = GetComponent<CircleCollider2D>();
+        render.sprite = normalSprite;
         hole.HoleCount++;
     }
     public void DeactivateHole()
