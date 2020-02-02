@@ -72,9 +72,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -10
+  m_SortingOrder: -9
   m_Sprite: {fileID: 0}
-  m_Color: {r: 0.023139918, g: 0.06441783, b: 0.3773585, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -112,11 +112,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392a8c6f2c97b084fa378cb7fe61fa34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stickySprite: {fileID: -6597854605687844029, guid: bdf7ad0d75a747346a313576ab423540,
+  stickySprite: {fileID: -8070577524028168948, guid: bdf7ad0d75a747346a313576ab423540,
     type: 3}
-  normalSprite: {fileID: -8070577524028168948, guid: bdf7ad0d75a747346a313576ab423540,
+  normalSprite: {fileID: -6597854605687844029, guid: bdf7ad0d75a747346a313576ab423540,
     type: 3}
-  respawnTimer: 5
+  respawnTimer: 10
 --- !u!1 &6823781243948147220
 GameObject:
   m_ObjectHideFlags: 0

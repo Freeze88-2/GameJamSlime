@@ -10,13 +10,13 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Variables")]
     [Tooltip("Maximum air time")]
-    [SerializeField] private readonly float maxJumpTime = 5;
+    [SerializeField] private float maxJumpTime = 5;
     [Tooltip("Maximum movement speed")]
-    [SerializeField] private readonly float speed = 10f;
+    [SerializeField] private float speed = 10f;
     [Tooltip("Input multiplier while grabbing wall")]
-    [SerializeField] private readonly float inputScaler = 0.5f;
+    [SerializeField] private float inputScaler = 0.5f;
     [Tooltip("The speed gained when jump is pressed")]
-    [SerializeField] private readonly float jumpForce = 10f;
+    [SerializeField] private float jumpForce = 10f;
 
     private float inputH;
     private readonly float maxGravity = 8;

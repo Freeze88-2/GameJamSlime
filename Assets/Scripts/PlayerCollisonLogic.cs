@@ -46,6 +46,7 @@ public class PlayerCollisonLogic : MonoBehaviour
     }
     private void ReloadLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.buildIndex);
     }
 }

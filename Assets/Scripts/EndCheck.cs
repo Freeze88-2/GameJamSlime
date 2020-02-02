@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class EndCheck : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
@@ -11,4 +11,5 @@ public class EndCheck : MonoBehaviour
             SceneManager.LoadScene(scene.buildIndex + 1);
         }
     }
+
 }
