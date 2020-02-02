@@ -5,6 +5,7 @@ using UnityEngine;
 public class WaterLevel : MonoBehaviour
 {
     [SerializeField] private GameObject waterContainer;
+    [SerializeField] private int waterSpeed = 10;
     private HoleLogic holeLogic;
     private Vector3 waterlevel;
     private Rigidbody2D rb;
@@ -14,12 +15,12 @@ public class WaterLevel : MonoBehaviour
         holeLogic = waterContainer.GetComponent<HoleLogic>();
         rb = GetComponent<Rigidbody2D>();
     }
-    private void Update()
+    private void FixedUpdate()
     {
-        if (rb.gravityScale > 0)
+        if (holeLogic.HoleCount > 0)
         {
-            waterlevel.y = (holeLogic.HoleCount * 10);
-            rb.velocity = waterlevel * Time.deltaTime;
+            waterlevel.y = (holeLogic.HoleCount * waterSpeed);
+            rb.velocity = waterlevel * Time.fixedDeltaTime;
         }
         else
         {
