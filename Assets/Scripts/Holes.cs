@@ -23,6 +23,11 @@ public class Holes : MonoBehaviour
         render.sprite = normalSprite;
         hole.HoleCount++;
     }
+    private void Update()
+    {
+        if (hole.HoleCount <= 0)
+            StopAllCoroutines();
+    }
     public void DeactivateHole()
     {
         particles.Stop();

@@ -1,10 +1,13 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCollisonLogic : MonoBehaviour
 {
     private bool interact;
     private Animator anim;
     private bool interacting;
+    private bool dead = false;
     [SerializeField] private AudioSource audio;
     private void Start()
     {
@@ -13,7 +16,8 @@ public class PlayerCollisonLogic : MonoBehaviour
     private void Update()
     {
         anim.SetBool("Interact", interacting);
-
+        anim.SetBool("Died", dead);
+        
         interact = Input.GetKey(KeyCode.E);
         if (interacting)
             interacting = false;
@@ -26,9 +30,9 @@ public class PlayerCollisonLogic : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Water"))
+        if (collision.CompareTag("Water") && !dead)
         {
-            anim.SetBool("Died", true);
+            dead = true;
         }
 
         if (collision.CompareTag("Hole"))
@@ -39,6 +43,9 @@ public class PlayerCollisonLogic : MonoBehaviour
                 collision.gameObject.GetComponent<Holes>().DeactivateHole();
             }
         }
-
+    }
+    private void ReloadLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
