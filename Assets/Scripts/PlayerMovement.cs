@@ -101,4 +101,5 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("IsGrounded", isGrounded);
         anim.SetBool("IsSticking", grabWall);
     }
+    
 }

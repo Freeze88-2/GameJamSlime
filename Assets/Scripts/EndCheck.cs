@@ -3,13 +3,29 @@ using UnityEngine.SceneManagement;
 
 public class EndCheck : MonoBehaviour
 {
+    public AsyncOperation async;
+    Collider2D player;
+    bool entered;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
+            entered = true;
+            player = other;
             Scene scene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(scene.buildIndex + 1);
+            
+            async = SceneManager.LoadSceneAsync(scene.buildIndex + 1 ,LoadSceneMode.Single);
+            async.allowSceneActivation = false;
         }
     }
-
+    private void FixedUpdate()
+    {
+        if (entered)
+        {
+            Vector3 camPos = player.gameObject.transform.position;
+            camPos.z = -10;
+            
+            Camera.main.transform.position = Vector3.MoveTowards(Camera.main.transform.position, camPos, -player.attachedRigidbody.velocity.y * 2 * Time.fixedDeltaTime);
+        }
+    }
 }

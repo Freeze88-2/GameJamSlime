@@ -8,10 +8,11 @@ public class PlayerCollisonLogic : MonoBehaviour
     private Animator anim;
     private bool interacting;
     private bool dead = false;
-    [SerializeField] private AudioSource audio;
+    private AudioSource sound;
     private void Start()
     {
         anim = GetComponent<Animator>();
+        sound = GetComponent<AudioSource>();
     }
     private void Update()
     {
@@ -25,8 +26,8 @@ public class PlayerCollisonLogic : MonoBehaviour
     }
     private void SetSound(AudioClip clip)
     {
-        audio.clip = clip;
-        audio.Play();
+        sound.clip = clip;
+        sound.Play();
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
