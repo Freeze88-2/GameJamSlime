@@ -1,12 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ResetCamera : MonoBehaviour
 {
-
-    Collider2D player;
-    bool entered;
+    private Collider2D player;
+    private bool entered;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))

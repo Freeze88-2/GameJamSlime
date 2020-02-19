@@ -2,21 +2,24 @@
 
 public class PlayerMovement : MonoBehaviour
 {
-    private Rigidbody2D rb;
+    protected Rigidbody2D rb;
+    protected Animator anim;
     private Vector3 movement;
     private TrailRenderer trail;
-    private Animator anim;
     private SpriteRenderer sprite;
 
     [Header("Variables")]
     [Tooltip("Maximum air time")]
-    [SerializeField] private float maxJumpTime = 5;
+    [SerializeField] private readonly float maxJumpTime = 5;
+
     [Tooltip("Maximum movement speed")]
-    [SerializeField] private float speed = 10f;
+    [SerializeField] private readonly float speed = 10f;
+
     [Tooltip("Input multiplier while grabbing wall")]
-    [SerializeField] private float inputScaler = 0.5f;
+    [SerializeField] private readonly float inputScaler = 0.5f;
+
     [Tooltip("The speed gained when jump is pressed")]
-    [SerializeField] private float jumpForce = 10f;
+    [SerializeField] private readonly float jumpForce = 15f;
 
     private float inputH;
     private readonly float maxGravity = 8;
@@ -24,8 +27,10 @@ public class PlayerMovement : MonoBehaviour
     private bool jump;
     private bool grabWall;
     private bool isGrounded;
+    protected bool interacting;
+    protected bool interact;
 
-    private void Start()
+    protected virtual void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
@@ -36,12 +41,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        interact = Input.GetKey(KeyCode.E);
         inputH = Input.GetAxis("Horizontal");
         jump = Input.GetKey(KeyCode.Space);
         grabWall = Input.GetKey(KeyCode.W);
         isGrounded = Physics2D.Raycast(transform.position, -transform.up, 0.8f,
                      LayerMask.GetMask("Ground", "FloatingObject"));
     }
+
     private void FixedUpdate()
     {
         if (isGrounded)
@@ -86,6 +93,7 @@ public class PlayerMovement : MonoBehaviour
 
         SetAnimator();
     }
+
     private void SetAnimator()
     {
         if (inputH > 0)
@@ -100,6 +108,6 @@ public class PlayerMovement : MonoBehaviour
         anim.SetFloat("Walking", Mathf.Abs(inputH));
         anim.SetBool("IsGrounded", isGrounded);
         anim.SetBool("IsSticking", grabWall);
+        anim.SetBool("Interact", interacting);
     }
-    
 }

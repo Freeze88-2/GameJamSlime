@@ -3,10 +3,10 @@
 public class WaterLevel : MonoBehaviour
 {
     [SerializeField] private GameObject waterContainer;
-    [SerializeField] private int waterSpeed = 10;
+    [SerializeField] private readonly int waterSpeed = 10;
 
     private HoleLogic holeLogic;
-    private Vector3 waterlevel;
+    private Vector3 waterlevel; 
     private Rigidbody2D rb;
 
     private void Start()

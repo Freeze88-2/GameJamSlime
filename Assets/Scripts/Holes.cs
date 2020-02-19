@@ -9,9 +9,9 @@ public class Holes : MonoBehaviour
     private WaitForSecondsRealtime waitTimer = null;
     private SpriteRenderer render;
 
-    [SerializeField] private Sprite stickySprite = null;
-    [SerializeField] private Sprite normalSprite = null;
-    [SerializeField] private float respawnTimer = 5;
+    [SerializeField] private readonly Sprite stickySprite = null;
+    [SerializeField] private readonly Sprite normalSprite = null;
+    [SerializeField] private readonly float respawnTimer = 5;
 
     private void Start()
     {
@@ -26,7 +26,9 @@ public class Holes : MonoBehaviour
     private void Update()
     {
         if (hole.HoleCount <= 0)
+        {
             StopAllCoroutines();
+        }
     }
     public void DeactivateHole()
     {
